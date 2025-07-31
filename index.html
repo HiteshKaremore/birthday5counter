@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Counter</title>
+    <title>Birthday Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Birthday Countdown Timer</h1>
-    <label for="Birthday">Enter your Birthday:</label>
-    <input type="date" id="Birthday">
+    <label for="birthdate">Enter your birthdate:</label>
+    <input type="date" id="birthdate">
     <button id="start">Start Countdown</button>
-
-    <div id="Countdown">
-        <p>Days: <span id="Days">--</span></p>
-        <p>Hours: <span id="Hours">--</span></p>
-        <p>Minutes: <span id="Minutes">--</span></p>
-        <p>Seconds: <span id="Seconds">--</span></p>
+    <div id="countdown">
+        <p>Days: <span id="days">--</span></p>
+        <p>Hours: <span id="hours">--</span></p>
+        <p>Minutes: <span id="minutes">--</span></p>
+        <p>Seconds: <span id="seconds">--</span></p>
     </div>
+    <p id="message"></p>
+    <script src="script.js"></script>
 </body>
 </html>

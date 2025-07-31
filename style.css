@@ -1,0 +1,152 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Fira+Mono&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(120deg, #181a28 0%, #14171f 100%);
+    color: #ececec;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 54px;
+}
+
+/* Glowing, bold heading */
+h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.7em;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #33cfff 0%, #ff45dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 3px 24px #05f2ff69;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* Labels with accent color */
+label {
+    font-size: 1.15em;
+    color: #66fcf1;
+    margin-bottom: 6px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+/* Date input: dark with highlight focus */
+input[type="date"] {
+    background: #222537;
+    border: 2px solid #33cfff;
+    color: #f7f7ff;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-size: 1em;
+    font-family: 'Fira Mono', monospace;
+    outline: none;
+    margin: 13px 0 22px 0;
+    transition: border-color 0.25s, box-shadow 0.2s;
+    box-shadow: 0 1px 8px #23dfff23;
+}
+
+input[type="date"]:focus {
+    border-color: #ff45dc;
+    box-shadow: 0 0 10px 2px #ff45dc54;
+}
+
+/* Button: glowy-gradient and animated */
+button {
+    background: linear-gradient(90deg, #33cfff 0%, #ff45dc 100%);
+    color: #14171f;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    padding: 13px 38px;
+    font-size: 1.15em;
+    cursor: pointer;
+    box-shadow: 0 4px 32px 4px #33cbff34;
+    letter-spacing: 1.1px;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    margin-bottom: 12px;
+    margin-top: 4px;
+}
+button:hover {
+    background: linear-gradient(90deg, #ff45dc, #33cfff 100%);
+    color: #0b1623;
+    transform: scale(1.07);
+    box-shadow: 0 6px 38px 10px #ff45de38;
+}
+
+/* Countdown panel: glassy, glowing, split columns */
+#countdown {
+    margin-top: 35px;
+    padding: 34px 50px;
+    border-radius: 22px;
+    background: rgba(20, 22, 35, 0.92);
+    box-shadow: 0 6px 38px #33cfff33, 0 2px 12px #ff45dc14;
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+    font-size: 1.55em;
+}
+
+#countdown p {
+    margin: 0 16px;
+    font-family: 'Fira Mono', monospace;
+    color: #f7b731;
+    font-size: 1.06em;
+    letter-spacing: 0.3px;
+    text-shadow: 0 2px 8px #f7b73133;
+}
+
+/* Big countdown digits with glow */
+#countdown span {
+    font-size: 2.15em;
+    font-weight: 700;
+    color: #ff45dc;
+    text-shadow: 0 0 18px #ff45dcaa, 0 0 4px #33cfff90;
+    min-width: 41px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Fira Mono', monospace;
+}
+
+/* Message (birthday or error) with pulse and color */
+#message {
+    margin-top: 38px;
+    font-size: 1.32em;
+    color: #f7b731;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1.2px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 18px #ff45dc43;
+    animation: pulse 1.5s infinite alternate;
+    min-height: 1.9em;
+}
+
+@keyframes pulse {
+    0% { color: #f7b731; }
+    100% { color: #fff1b7; text-shadow: 0 2px 24px #f7b731aa; }
+}
+
+/* Responsive: Countdown goes vertical, headings shrink for mobile */
+@media (max-width: 700px) {
+    #countdown {
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px 8px;
+        font-size: 1.07em;
+    }
+    h1 {
+        font-size: 1.35em;
+    }
+    button {
+        padding: 12px 22px;
+        font-size: 1em;
+    }
+}
